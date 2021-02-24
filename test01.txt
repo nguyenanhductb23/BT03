@@ -1,0 +1,47 @@
+// Simple Array Sum
+int simpleArraySum(vector<int> ar) {
+    int sum = 0;
+    for (int i = 0; i < ar.size(); i++) sum += ar[i];
+    return sum;
+}
+
+
+//Compare the Triplets
+vector<int> compareTriplets(vector<int> a, vector<int> b) {
+    vector<int> points(2,0);
+    for (int i = 0; i < 3; i++) {
+        if (a[i] > b[i]) points[0]++;
+        else if (a[i] < b[i]) points[1]++;
+    }
+    return points;
+}
+
+
+//A Very Big Sum
+long aVeryBigSum(vector<long> ar) {
+    long sum = 0;
+    for (int i = 0; i < ar.size(); i++) sum += ar[i];
+    return sum;
+}
+
+
+//Diagonal Difference
+int diagonalDifference(vector<vector<int>> arr) {
+    int n = arr.size();
+    int pri = 0,  sec = 0;
+    for (int i = 0; i < n; i++) {
+        pri += arr[i][i];
+        sec += arr[i][n-1-i];
+    }
+    return abs(pri - sec);
+}
+
+
+//Staircase
+void staircase(int n) {
+    for (int i = 1; i <= n; i++) {
+        for (int j = 0; j < n-i; j++) cout << ' ';
+        for (int j = 0; j < i; j++) cout << '#';
+        cout << endl;
+    }
+}
